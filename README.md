@@ -1,75 +1,24 @@
-[![Build Status](https://github.com/jacomyal/sigma.js/workflows/Tests/badge.svg)](https://github.com/jacomyal/sigma.js/actions)
+# Sigma.js full-featured demo
 
-<br />
+This project aims to provide a full-features "real life" application using sigma.js. It is built using [Vite](https://vitejs.dev/), and uses [react-sigma](https://sim51.github.io/react-sigma/), to interface sigma.js with React.
 
-![Sigma.js](packages/website/static/img/logo-sigma-text.svg)
+## Dataset
 
-**[Website](https://www.sigmajs.org/)** | **[Documentation](https://www.sigmajs.org/docs)** | **[Storybook](https://www.sigmajs.org/storybook)** | <strong><a rel="me" href="https://vis.social/@sigmajs">Mastodon</a></strong>
+The dataset has been kindly crafted by the [Sciences-Po médialab](https://medialab.sciencespo.fr/) and [OuestWare](https://www.ouestware.com/en/) teams using [Seealsology](https://densitydesign.github.io/strumentalia-seealsology/). It represents a network of Wikipedia pages, connected by ["See also"](https://en.wikipedia.org/wiki/See_also) links. It then was tagged by hand.
 
----
+## Available Scripts
 
-[Sigma.js](https://www.sigmajs.org) is an open-source JavaScript library aimed at visualizing graphs of thousands of nodes and edges using WebGL, mainly developed by [@jacomyal](https://github.com/jacomyal) and [@Yomguithereal](https://github.com/Yomguithereal), and built on top of [graphology](https://graphology.github.io/).
+In the project directory, you can run:
 
-## How to use in your project
+### `npm start`
 
-To integrate sigma into your project, follow these simple steps:
+Runs the app in the development mode.\
+Open [localhost:5173](http://localhost:5173) to view it in the browser.
 
-1. **Installation:** Add `sigma` and `graphology` to your project by running the following command:
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-   ```bash
-   npm install sigma graphology
-   ```
+### `npm run build`
 
-2. **Usage:** Import sigma into your JavaScript or TypeScript file:
-
-   ```javascript
-   import Graph from "graphology";
-   import Sigma from "sigma";
-   ```
-
-   Then, create a new `Sigma` instance with your graph data and target container:
-
-   ```javascript
-   const graph = new Graph();
-   graph.addNode("1", { label: "Node 1", x: 0, y: 0, size: 10, color: "blue" });
-   graph.addNode("2", { label: "Node 2", x: 1, y: 1, size: 20, color: "red" });
-   graph.addEdge("1", "2", { size: 5, color: "purple" });
-
-   const sigmaInstance = new Sigma(graph, document.getElementById("container"));
-   ```
-
-## How to develop locally
-
-To run the [Storybook](https://storybook.js.org/) locally:
-
-```bash
-git clone git@github.com:jacomyal/sigma.js.git
-cd sigma.js
-npm install
-npm run start
-```
-
-This will open the Storybook in your web browser, which live reloads when you modify the stories or the package sources.
-
-## Resources
-
-- **GitHub Project:** The source code and collaborative development efforts for Sigma.js are hosted on [GitHub](https://github.com/jacomyal/sigma.js).
-- **Website:** The official website, [sigmajs.org](https://sigmajs.org), kindly designed by [Robin de Mourat](https://github.com/robindemourat/) from the [Sciences-Po médialab](https://medialab.sciencespo.fr/en/) team, showcases the library's capabilities.
-- **Documentation:** A detailed documentation, built with [Docusaurus](https://docusaurus.io/), is available at [sigmajs.org/docs](https://sigmajs.org/docs). It provides extensive guides and API references for users.
-- **Storybook:** Interactive examples can be found at [sigmajs.org/storybook](https://sigmajs.org/storybook).
-- **Demo:** A comprehensive demo, available at [sigmajs.org/demo](https://sigmajs.org/demo), features a full-featured React-based web application utilizing Sigma.js.
-
-## How to contribute
-
-You can contribute by submitting [issues tickets](http://github.com/jacomyal/sigma.js/issues) and proposing [pull requests](http://github.com/jacomyal/sigma.js/pulls). Make sure that tests and linting pass before submitting any pull request.
-
-You can also browse the related documentation [here](https://github.com/jacomyal/sigma.js/tree/main/CONTRIBUTING.md).
-
-## How to start a new package
-
-Run `npm run createPackage` from the project root. It will:
-
-- Ask you the new package name
-- Copy the `packages/template` folder
-- Update the new package `package.json` entries (name, description, exports)
-- Update various other files (buildable packages list in `tsconfig.json`, Preconstruct compatible packages list in `package.json`...)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
